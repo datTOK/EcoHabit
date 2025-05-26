@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const blogs = [
   {
@@ -18,16 +19,22 @@ const blogs = [
     id: 3,
     title: 'The Rise of Eco-Friendly Tech',
     description: 'Technology is going green—here’s how innovations are helping.',
-    image: 'https://plus.unsplash.com/premium_photo-1727987833373-8b1a94b1c80f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWNvJTIwZnJpZW5kbHl8ZW58MHx8MHx8fDA%3D',
+    image: 'https://plus.unsplash.com/premium_photo-1727987833373-8b1a94b1c80f?w=600&auto=format&fit=crop&q=60',
   },
 ];
 
 const BlogPage = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.heading}>Green Blog</Text>
       {blogs.map((blog) => (
-        <TouchableOpacity key={blog.id} style={styles.card}>
+        <TouchableOpacity
+          key={blog.id}
+          style={styles.card}
+          onPress={() => navigation.navigate('BlogDetail', { blog })}
+        >
           <Image source={{ uri: blog.image }} style={styles.image} />
           <View style={styles.content}>
             <Text style={styles.title}>{blog.title}</Text>
