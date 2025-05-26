@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, Dimensions } from 'react-native';
+import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
 import React, { Component } from 'react';
 import { SearchBar } from '@rneui/themed';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -61,10 +61,12 @@ export default class HomeScreen extends Component {
               <Ionicons name="earth" size={50} color="#08B14A" />
               <Text style={styles.iconLabel}>Trái đất xanh</Text>
             </View>
-            <View style={styles.iconItem}>
+            <TouchableOpacity
+              style={styles.iconItem}
+              onPress={() => this.props.navigation.navigate('GreenJourney')}>
               <Ionicons name="list" size={50} color="#08B14A" />
               <Text style={styles.iconLabel}>Hành trình xanh</Text>
-            </View>
+            </TouchableOpacity>
             <View style={styles.iconItem}>
               <Ionicons name="location" size={50} color="#08B14A" />
               <Text style={styles.iconLabel}>Địa điểm xanh</Text>
