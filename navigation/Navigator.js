@@ -8,6 +8,8 @@ import HomeScreen from '../screens/HomeScreen';
 import BlogPage from '../screens/BlogScreen';
 import BlogDetailScreen from '../screens/BlogDetailScreen';
 import GreenJourneyScreen from '../screens/GreenJourneyScreen';
+import CreatePostScreen from '../screens/CreatePostScreen';
+import PostDetailScreen from '../screens/PostDetailScreen';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -72,6 +74,9 @@ export default function Navigator() {
         <Stack.Screen name="MainTabs" component={BottomTabs} options={{ headerShown: false }} />
         <Stack.Screen name="BlogDetail" component={BlogDetailScreen} options={{ title: 'Blog Details' }} />
         <Stack.Screen name="GreenJourney" component={GreenJourneyScreen} />
+        <Stack.Screen name="Post" component={PostScreen} options={{ title: 'Post Details' }} />
+        <Stack.Screen name="CreatePost" component={CreatePostScreen} />
+        <Stack.Screen name="PostDetail" component={PostDetailScreen} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

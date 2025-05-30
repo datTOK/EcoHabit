@@ -17,8 +17,13 @@ export default class HomeScreen extends Component {
     return (
       <>
         <View style={styles.header}>
-          <Text style={styles.headerText}>Username</Text>
-          <Text style={styles.headerText}>Point</Text>
+          <View>
+            <Text style={styles.headerText}>Username</Text>
+            <Text style={styles.headerText}>Point</Text>
+          </View>
+          <View>
+            <Ionicons name="reorder-three-sharp" size={34} color="#fff" />
+          </View>
         </View>
 
         <View style={styles.search}>
