@@ -27,16 +27,14 @@ export default function GreenJourneyScreen() {
 
       <View style={styles.imageBox}>
         <Image
-          source={require('../assets/icon.png')} // Replace with your local image
+          source={require('../assets/icon.png')} 
           style={styles.image}
           resizeMode="contain"
         />
       </View>
 
-      {/* View Detail */}
       <Text style={styles.detailText}>View detail of</Text>
 
-      {/* Grid Buttons */}
       <View style={styles.grid}>
         {actions.map((item, index) => (
           <TouchableOpacity style={styles.iconContainer} key={index}>

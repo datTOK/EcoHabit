@@ -9,12 +9,7 @@ const BlogDetailScreen = ({ route }) => {
       <Image source={{ uri: blog.image }} style={styles.image} />
       <Text style={styles.title}>{blog.title}</Text>
       <Text style={styles.description}>{blog.description}</Text>
-      <Text style={styles.content}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius, nisl ut luctus blandit,
-        sapien justo consequat justo, at ullamcorper velit magna eget lacus. Curabitur at justo nunc.
-        Aliquam erat volutpat. Nulla facilisi. Proin a justo in lorem porta cursus. Sed eu dolor nec arcu
-        accumsan gravida. Vivamus fringilla facilisis dui vel porttitor.
-      </Text>
+      <Text style={styles.content}>{blog.content}</Text>
     </ScrollView>
   );
 };
